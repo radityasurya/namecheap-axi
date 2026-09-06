@@ -1,0 +1,25 @@
+{
+  "name": "namecheap-axi",
+  "version": "0.1.0",
+  "description": "AXI-compliant Namecheap CLI — domains, DNS records, nameservers, and registrar lock with token-efficient TOON output",
+  "keywords": ["axi", "namecheap", "dns", "domains", "registrar", "agent", "cli", "toon"],
+  "repository": { "type": "git", "url": "git+https://github.com/radityasurya/namecheap-axi.git" },
+  "homepage": "https://github.com/radityasurya/namecheap-axi#readme",
+  "bugs": { "url": "https://github.com/radityasurya/namecheap-axi/issues" },
+  "license": "MIT",
+  "type": "module",
+  "bin": { "namecheap-axi": "bin/namecheap-axi.js" },
+  "exports": { ".": "./src/cli.js" },
+  "files": ["bin", "src", "skills", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "build:skill": "node scripts/build-skill.mjs",
+    "check:skill": "node scripts/build-skill.mjs --check"
+  },
+  "dependencies": {
+    "axi-sdk-js": "^0.1.11",
+    "@toon-format/toon": "^0.9.0",
+    "fast-xml-parser": "^4.5.0"
+  }
+}
